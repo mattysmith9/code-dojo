@@ -24,6 +24,7 @@ router.get('/test', (req, res) => res.json({ msg: 'Users Works' }));
 */
 router.post('/register', (req, res) => {
 	const { errors, isValid } = validateRegisterInput(req.body);
+
 	if (!isValid) {
 		return res.status(400).json(errors);
 	}
@@ -58,7 +59,7 @@ router.post('/register', (req, res) => {
 });
 
 /* 
-@route GET api/users/login
+@route POST api/users/login
 @desc LOGIN USER | RETURNING JWT TOKEN
 @access PUBLIC
 */
