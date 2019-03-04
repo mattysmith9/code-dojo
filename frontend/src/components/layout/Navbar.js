@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/auth-actions';
 import { clearCurrentProfile } from '../../actions/profile-actions';
 
-
 class Navbar extends Component {
 	onLogoutClick = e => {
 		e.preventDefault();

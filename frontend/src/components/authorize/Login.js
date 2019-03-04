@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth-actions';
-import TextAreaField from '../common/TextAreaField';
+import TextFieldGroup from '../common/TextFieldGroup';
 
 class Login extends Component {
 	constructor() {
@@ -55,7 +55,7 @@ class Login extends Component {
 								Sign in to your DevConnector account
 							</p>
 							<form onSubmit={this.onSubmit}>
-								<TextAreaField
+								<TextFieldGroup
 									placeholder="Email Address"
 									name="email"
 									type="email"
@@ -63,7 +63,7 @@ class Login extends Component {
 									onChange={this.onChange}
 									error={errors.email}
 								/>
-								<TextAreaField
+								<TextFieldGroup
 									placeholder="Password"
 									name="password"
 									type="password"

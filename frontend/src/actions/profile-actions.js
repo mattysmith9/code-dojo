@@ -59,7 +59,7 @@ export const createProfile = (profileData, history) => dispatch => {
 		);
 };
 
-/* ADD EXPERIENCE TO PROFILE */
+/* ADD EXPERIENCE */
 export const addExperience = (expData, history) => dispatch => {
 	axios
 		.post('/api/profile/experience', expData)
@@ -72,7 +72,7 @@ export const addExperience = (expData, history) => dispatch => {
 		);
 };
 
-/* ADD EDUCATION TO PROFILE */
+/* ADD EDUCATION */
 export const addEducation = (eduData, history) => dispatch => {
 	axios
 		.post('/api/profile/education', eduData)
@@ -85,7 +85,7 @@ export const addEducation = (eduData, history) => dispatch => {
 		);
 };
 
-/* DELETE EXPERIENCE FROM PROFILE */
+/* DELETE EXPERIENCE */
 export const deleteExperience = id => dispatch => {
 	axios
 		.delete(`/api/profile/experience/${id}`)
@@ -103,7 +103,7 @@ export const deleteExperience = id => dispatch => {
 		);
 };
 
-/* DELETE EDUCATION FROM PROFILE */
+/* DELETE EDUCATION */
 export const deleteEducation = id => dispatch => {
 	axios
 		.delete(`/api/profile/education/${id}`)
@@ -140,7 +140,7 @@ export const getProfiles = () => dispatch => {
 		);
 };
 
-/* DELETE ACCOUNT AND PROFILE */
+/* DELETE ACCOUNT & PROFILE */
 export const deleteAccount = () => dispatch => {
 	if (window.confirm('Are you sure? This can NOT be undone!')) {
 		axios
@@ -167,7 +167,7 @@ export const setProfileLoading = () => {
 	};
 };
 
-/* CLEAR CURRENT PROFILE */
+/* CLEAR PROFILE */
 export const clearCurrentProfile = () => {
 	return {
 		type: CLEAR_CURRENT_PROFILE
