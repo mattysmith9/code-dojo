@@ -1,31 +1,32 @@
 {
-	"name": "udemy-dev-connect",
-	"version": "1.0.0",
-	"description": "developer social network",
-	"main": "server.js",
-	"scripts": {
-		"frontend-install": "npm install --prefix frontend",
-		"start": "node server.js",
-		"server": "nodemon server.js",
-		"frontend": "npm start --prefix frontend",
-		"dev": "concurrently \"npm run server\" \"npm run frontend\""
-	},
-	"keywords": [],
-	"author": "Matty Smith",
-	"license": "ISC",
-	"dependencies": {
-		"bcryptjs": "^2.4.3",
-		"body-parser": "^1.18.3",
-		"concurrently": "^4.1.0",
-		"express": "^4.16.4",
-		"gravatar": "^1.8.0",
-		"jsonwebtoken": "^8.5.0",
-		"mongoose": "^5.4.14",
-		"passport": "^0.4.0",
-		"passport-jwt": "^4.0.0",
-		"validator": "^10.11.0"
-	},
-	"devDependencies": {
-		"nodemon": "^1.18.10"
-	}
+  "name": "udemy-dev-connect",
+  "version": "1.0.0",
+  "description": "developer social network",
+  "main": "server.js",
+  "scripts": {
+    "frontend-install": "npm install --prefix frontend",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "Matty Smith",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.14",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
 }

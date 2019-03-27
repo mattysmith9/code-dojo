@@ -62,7 +62,7 @@ class ProfileCreds extends Component {
         </p>
       </li>
     ));
-    
+
     return (
       <div className="row">
         <div className="col-md-6">
