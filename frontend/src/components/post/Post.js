@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getPost } from '../../actions/post-actions';
 import PropTypes from 'prop-types';
 import PostItem from '../posts/PostItem';
 import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';
 import Spinner from '../common/Spinner';
-import { getPost } from '../../actions/post-actions';
 
 class Post extends Component {
   componentDidMount() {
@@ -28,7 +28,6 @@ class Post extends Component {
         </div>
       );
     }
-
     return (
       <div className="post">
         <div className="container">

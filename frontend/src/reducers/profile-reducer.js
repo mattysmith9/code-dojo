@@ -1,14 +1,12 @@
-import {
-  GET_PROFILE,
-  GET_PROFILES,
-  PROFILE_LOADING,
-  CLEAR_CURRENT_PROFILE
-} from '../actions/types';
+import { PROFILE_LOADING } from '../actions/types';
+import { GET_PROFILES } from '../actions/types';
+import { GET_PROFILE } from '../actions/types';
+import { CLEAR_CURRENT_PROFILE } from '../actions/types';
 
 const initialState = {
-  profile: null,
+  loading: false,
   profiles: null,
-  loading: false
+  profile: null
 };
 
 export default function(state = initialState, action) {

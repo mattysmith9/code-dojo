@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { deleteEducation } from '../../actions/profile-actions';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
-import { deleteEducation } from '../../actions/profile-actions';
 
 class Education extends Component {
   onDeleteClick(id) {
@@ -32,6 +32,7 @@ class Education extends Component {
         </td>
       </tr>
     ));
+
     return (
       <div>
         <h4 className="mb-4">Education Credentials</h4>

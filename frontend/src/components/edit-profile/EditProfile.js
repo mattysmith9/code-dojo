@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import {
-  createProfile,
-  getCurrentProfile
-} from '../../actions/profile-actions';
+import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { getCurrentProfile } from '../../actions/profile-actions';
+import { createProfile } from '../../actions/profile-actions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import isEmpty from '../../validation/is-empty';
+import PropTypes from 'prop-types';
 
 class CreateProfile extends Component {
   constructor(props) {

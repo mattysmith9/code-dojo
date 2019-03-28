@@ -1,14 +1,11 @@
 import axios from 'axios';
-
-import {
-  ADD_POST,
-  GET_ERRORS,
-  CLEAR_ERRORS,
-  GET_POSTS,
-  GET_POST,
-  POST_LOADING,
-  DELETE_POST
-} from './types';
+import { POST_LOADING } from './types';
+import { GET_POSTS } from './types';
+import { GET_POST } from './types';
+import { ADD_POST } from './types';
+import { DELETE_POST } from './types';
+import { GET_ERRORS } from './types';
+import { CLEAR_ERRORS } from './types';
 
 // Add Post
 export const addPost = (postData) => (dispatch) => {

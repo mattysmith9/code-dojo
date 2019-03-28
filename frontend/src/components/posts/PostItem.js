@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-import { deletePost, addLike, removeLike } from '../../actions/post-actions';
+import { deletePost } from '../../actions/post-actions';
+import { addLike } from '../../actions/post-actions';
+import { removeLike } from '../../actions/post-actions';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -13,7 +15,7 @@ class PostItem extends Component {
   onLikeClick(id) {
     this.props.addLike(id);
   }
-
+  
   onUnlikeClick(id) {
     this.props.removeLike(id);
   }

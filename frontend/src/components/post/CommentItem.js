@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { deleteComment } from '../../actions/post-actions';
+import PropTypes from 'prop-types';
+
 
 class CommentItem extends Component {
   onDeleteClick(postId, commentId) {
@@ -10,7 +11,6 @@ class CommentItem extends Component {
 
   render() {
     const { comment, postId, auth } = this.props;
-
     return (
       <div className="card card-body mb-3">
         <div className="row">

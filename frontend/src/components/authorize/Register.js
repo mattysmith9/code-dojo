@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/auth-actions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import PropTypes from 'prop-types';
 
 class Register extends Component {
   constructor() {
@@ -35,6 +35,7 @@ class Register extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    
     const newUser = {
       name: this.state.name,
       email: this.state.email,

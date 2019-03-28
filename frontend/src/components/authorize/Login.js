@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth-actions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import PropTypes from 'prop-types';
 
 class Login extends Component {
   constructor() {
@@ -35,6 +35,7 @@ class Login extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+
     const userData = {
       email: this.state.email,
       password: this.state.password

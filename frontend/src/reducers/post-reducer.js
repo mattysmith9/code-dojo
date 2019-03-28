@@ -1,15 +1,13 @@
-import {
-  ADD_POST,
-  GET_POSTS,
-  GET_POST,
-  DELETE_POST,
-  POST_LOADING
-} from '../actions/types';
+import { POST_LOADING } from '../actions/types';
+import { GET_POSTS } from '../actions/types';
+import { GET_POST } from '../actions/types';
+import { ADD_POST } from '../actions/types';
+import { DELETE_POST } from '../actions/types';
 
 const initialState = {
+  loading: false,
   posts: [],
-  post: {},
-  loading: false
+  post: {}
 };
 
 export default function(state = initialState, action) {

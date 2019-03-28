@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { addComment } from '../../actions/post-actions';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import PropTypes from 'prop-types';
 
 class CommentForm extends Component {
   constructor(props) {
@@ -11,7 +11,6 @@ class CommentForm extends Component {
       text: '',
       errors: {}
     };
-
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -22,29 +21,25 @@ class CommentForm extends Component {
     }
   }
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
-
     const { user } = this.props.auth;
     const { postId } = this.props;
-
     const newComment = {
       text: this.state.text,
       name: user.name,
       avatar: user.avatar
     };
-
     this.props.addComment(postId, newComment);
     this.setState({ text: '' });
-  }
+  };
 
-  onChange(e) {
+  onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
   render() {
     const { errors } = this.state;
-
     return (
       <div className="post-form mb-3">
         <div className="card card-info">
